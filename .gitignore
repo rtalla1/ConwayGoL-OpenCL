@@ -6,7 +6,6 @@
 *.lo
 *.o
 *.obj
-*.out
 
 # Precompiled Headers
 *.gch
@@ -31,3 +30,18 @@
 *.exe
 *.out
 *.app
+
+.vscode/**
+
+# macOS metadata
+.DS_Store
+
+# Editor swap & backup files
+*~
+*.swp
+*.tmp
+
+# Logs and core dumps
+*.log
+core
+*.core
