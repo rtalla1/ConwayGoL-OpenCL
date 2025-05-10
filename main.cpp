@@ -234,7 +234,7 @@ int main(int argc, char** argv) {
             }
             std::cout << "│\n";
         }
-        std::cout << std::string(leftPad, ' ') << u8"└" << horiz << u8"┘\n";
+        std::cout << std::string(leftPad, ' ') << "└" << horiz << "┘\n";
 
         usleep(delay);
 

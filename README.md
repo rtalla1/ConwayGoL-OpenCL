@@ -1,4 +1,3 @@
-#o get some experience with OpenCL, I decided to implement this game because of its interesting visual and mathematical nature.
 # Conway's Game of Life
 
 An OpenCL implementation of Conway's Game of Life, harnessing GPU acceleration for fast simulations of cellular automata.
@@ -12,7 +11,6 @@ An OpenCL implementation of Conway's Game of Life, harnessing GPU acceleration f
 - [Maps](#maps)
 - [Examples](#examples)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 Conway's Game of Life is a zero-player game that simulates the life and death of cells on a two-dimensional grid based on a set of simple rules. This project implements the game using OpenCL to leverage the parallel processing capabilities of modern GPUs, CPUs, FPGAs, and more to deliver high-performance simulations.
@@ -30,53 +28,41 @@ Conway's Game of Life is a zero-player game that simulates the life and death of
 - CMake (optional).
 
 ## Building
-Build the project using CMake:
-
 ```bash
-git clone https://github.com/rtalla1/conwayGoL-OpenCL.git
-cd conwayGoL-OpenCL
-mkdir build && cd build
-cmake ..
-make
+clang++ main.cpp -framework OpenCL -o conway
 ```
-
-Or, without CMake:
-
+This produces `conway`. You can then run it directly:
 ```bash
-clang++ main.cpp -framework OpenCL -o c
+./conway <map_file> <num_generations> <delay_microseconds>
 ```
 
 ## Usage
-Run the executable with optional arguments:
+Run the executable with the required arguments:
 
 ```bash
-./conway [options]
+./conway <map_file> <num_generations> <delay_microseconds>
+# or, if you used the default output name:
+./a.out <map_file> <num_generations> <delay_microseconds>
 ```
-
-### Options
-- `-m, --map <file>`: Path to a map file (default: `maps/m1.txt`).
-- `-s, --steps <n>`: Number of generations to simulate (default: infinite loop).
-- `-d, --delay <ms>`: Delay between frames in milliseconds (default: 100).
 
 Example:
 
 ```bash
-./conway --map maps/m2.txt --steps 1000 --delay 50
+./conway maps/m1.txt 500 25000
+# or
+./a.out maps/m3.txt 250 50000
 ```
 
 ## Maps
 Sample map files are located in the `maps/` directory:
-- `m1.txt`: Glider pattern.
-- `m2.txt`: Gosper glider gun.
-- `m3.txt`: Random initial state.
+- `m1.txt`: Random pattern.
+- `m2.txt`: Columns.
+- `m3.txt`: Smaller map with diagonal patterns.
 
-Map files are simple text grids where `.` denotes a dead cell and `*` denotes a live cell.
+Map files are simple text grids where `.` denotes a dead cell and `X` denotes a live cell. Feel free to contribute with some interesting maps!
 
-## Examples
-Include screenshots or link to demo videos here.
+## Example
+![Conway’s Game of Life demo](https://i.imgur.com/qEvWrk1.gif)
 
 ## Contributing
 Contributions are welcome! Please open issues or submit pull requests for bug fixes, new features, or improvements.
-
-## License
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
