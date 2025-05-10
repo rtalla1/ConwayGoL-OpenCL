@@ -13,8 +13,8 @@ __kernel void next_conway(__global const uchar* curr,
     uchar curr_cell = curr[idx];
 
     int live_neighbors = 0;
-    for (int dy = -1; dy <= 1; ++dy) {
-        for (int dx = -1; dx <= 1; ++dx) {
+    for (int dy = -1; dy <= 1; dy++) {
+        for (int dx = -1; dx <= 1; dx++) {
             if (dx == 0 && dy == 0) continue;
 
             // wrap around
