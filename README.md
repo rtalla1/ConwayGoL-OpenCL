@@ -59,7 +59,7 @@ Sample map files are located in the `maps/` directory:
 - `m2.txt`: Columns.
 - `m3.txt`: Smaller map with diagonal patterns.
 
-Map files are simple text grids where `.` denotes a dead cell and `X` denotes a live cell. Feel free to contribute with some interesting maps!
+Map files are simple text grids where `.` denotes a dead cell. Feel free to contribute with some interesting maps!
 
 ## Example
 ![Conway’s Game of Life demo](https://i.imgur.com/qEvWrk1.gif)

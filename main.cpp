@@ -155,7 +155,7 @@ int main(int argc, char** argv) {
             return 1;
         }
         for (int x = 0; x < width; ++x) {
-            inGrid[y*width + x] = (lines[y][x] == 'X') ? 1 : 0;
+            inGrid[y*width + x] = (lines[y][x] != '.') ? 1 : 0;
         }
     }
 
