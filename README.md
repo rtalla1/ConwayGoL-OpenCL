@@ -1,6 +1,6 @@
 # Conway's Game of Life
 
-An OpenCL implementation of Conway's Game of Life, harnessing GPU acceleration for fast simulations of cellular automata.
+An OpenCL implementation of Conway's Game of Life, harnessing GPU acceleration for fast cellular automata simulations.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -59,7 +59,7 @@ Sample map files are located in the `maps/` directory:
 - `m2.txt`: Columns.
 - `m3.txt`: Smaller map with diagonal patterns.
 
-Map files are simple text grids where `.` denotes a dead cell. Feel free to contribute with some interesting maps!
+Map files are simple text grids where `.` denotes a dead cell. Feel free to contribute some interesting maps! At the moment, terminal window re-sizing may be necessary to view bigger maps.
 
 ## Example
 ![Conway’s Game of Life demo](https://i.imgur.com/qEvWrk1.gif)
